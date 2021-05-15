@@ -1,0 +1,13 @@
+@import "../app.scss";
+.container-fluid {
+    .container {
+        font-size: 7rem;
+        color: green;
+        justify-content: center;
+        align-items: center;
+    }
+    .botao-register {
+        background: green;
+        color: white;
+    }
+}

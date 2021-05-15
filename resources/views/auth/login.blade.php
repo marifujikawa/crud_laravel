@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'TESTE')
+@section('title', 'Oi')
 @section('content')
 
     <div class="container-fluid d-flex justify-content-center flex-column align-items-center">
@@ -23,7 +23,9 @@
                 <input class="texto-input" type="password" name="password" id="password" placeholder="Senha">
                 <label for="password">Senha</label>
             </div>
-            <button type="submit" class=" btn botao-login">Entrar</button>
+            <div class="d-flex justify-content-center align-items-center">
+                <button type="submit" class=" btn botao-login">Entrar</button>
+            </div>
         </form>
         <div class="py-4 cadastro">
             <span> Não tem uma conta? </span>
@@ -33,4 +35,8 @@
 
 
     </div>
+@endsection
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection

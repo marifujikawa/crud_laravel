@@ -10060,3 +10060,17 @@ body {
 .form-group .texto-input {
   padding-top: 2rem;
 }
+
+.container-fluid .container, .container-sm .container, .container-md .container, .container-lg .container, .container-xl .container {
+  font-size: 7rem;
+  color: green;
+  justify-content: center;
+  align-items: center;
+}
+.container-fluid .botao-login, .container-sm .botao-login, .container-md .botao-login, .container-lg .botao-login, .container-xl .botao-login {
+  background: green;
+  color: white;
+}
+.container-fluid .cadastro, .container-sm .cadastro, .container-md .cadastro, .container-lg .cadastro, .container-xl .cadastro {
+  color: white;
+}
