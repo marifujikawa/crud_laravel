@@ -57,8 +57,14 @@ body {
                 margin-bottom: 10px;
                 color: green;
                 transform: translateY(-1em);
+                &.error {
+                    color: red;
+                }
             }
         }
+    }
+    .error {
+        color: red;
     }
     .texto-input {
         padding-top: 2rem;

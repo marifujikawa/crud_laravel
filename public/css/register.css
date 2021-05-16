@@ -10057,6 +10057,12 @@ body {
   color: green;
   transform: translateY(-1em);
 }
+.form-group input:focus + label.error, .form-group input:not(:placeholder-shown) + label.error, .form-group input:-webkit-autofill + label.error {
+  color: red;
+}
+.form-group .error {
+  color: red;
+}
 .form-group .texto-input {
   padding-top: 2rem;
 }
@@ -10069,5 +10075,8 @@ body {
 }
 .container-fluid .botao-register, .container-sm .botao-register, .container-md .botao-register, .container-lg .botao-register, .container-xl .botao-register {
   background: green;
+  color: white;
+}
+.container-fluid .cadastro, .container-sm .cadastro, .container-md .cadastro, .container-lg .cadastro, .container-xl .cadastro {
   color: white;
 }

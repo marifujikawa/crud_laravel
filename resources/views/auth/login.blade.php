@@ -12,28 +12,39 @@
 
                 @if ($errors->has('email'))
 
-                    <input class="texto-input error" type="text" name="email" id="email" placeholder="Email">
+                    <input class="texto-input error" type="text" name="email" id="email" placeholder="Email" value="{{ old('email') }}">
+                    <label for="email" class="error">E-mail</label>
                     <div class="error">{{ $errors->first('email') }}</div>
+
                 @else
-                    <input class="texto-input" type="text" name="email" id="email" placeholder="Email">
+                    <input class="texto-input" type="text" name="email" id="email" placeholder="Email" value="{{ old('email') }}">
+                    <label for="email">E-mail</label>
                 @endif
-                <label for="email">E-mail</label>
+
             </div>
             <div class="form-group">
-                <input class="texto-input" type="password" name="password" id="password" placeholder="Senha">
-                <label for="password">Senha</label>
+                @if ($errors->has('password'))
+
+                    <input class="texto-input error" type="password" name="password" id="password" placeholder="password"
+                        value="{{ old('password') }}">
+                    <label for="password" class="error">Senha</label>
+                    <div class="error">{{ $errors->first('password') }}</div>
+                @else
+                    <input class="texto-input" type="password" name="password" id="password" placeholder="password"
+                        value="{{ old('password') }}">
+                    <label for="password">Senha</label>
+
+                @endif
+
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <button type="submit" class=" btn botao-login">Entrar</button>
             </div>
         </form>
         <div class="py-4 cadastro">
-            <span> Não tem uma conta? </span>
+            <span>Não tem uma conta?</span>
             <a href="/register"> Cadastre-se </a>
         </div>
-
-
-
     </div>
 @endsection
 

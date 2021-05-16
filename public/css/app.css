@@ -10057,6 +10057,12 @@ body {
   color: green;
   transform: translateY(-1em);
 }
+.form-group input:focus + label.error, .form-group input:not(:placeholder-shown) + label.error, .form-group input:-webkit-autofill + label.error {
+  color: red;
+}
+.form-group .error {
+  color: red;
+}
 .form-group .texto-input {
   padding-top: 2rem;
 }
