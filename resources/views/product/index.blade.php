@@ -1,4 +1,5 @@
 @extends('layouts.logged')
+@section('content')
 <hr>
 <div class="container pt-5">
     <h2>{{ __('Product') }}</h2>
@@ -45,7 +46,5 @@
             @endforeach
         </tbody>
     </table>
-
-
-
 </div>
+@endsection

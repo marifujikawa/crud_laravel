@@ -27,6 +27,23 @@
 
                 </div>
             </li>
+            <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Acessórios
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach (\App\Models\Acessory::all() as $acessory)
+                        <a class="dropdown-item" href="/acessory/{{ $acessory->id }}">{{ $acessory->name }}</a>
+                    @endforeach
+
+                    <div class="dropdown-divider"></div>
+
+                    <a type="button" class="dropdown-item" href="/acessory">Acessórios</a>
+
+                </div>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <li class="nav-item dropdown">
