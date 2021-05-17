@@ -1,5 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+.navbar {
+  color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: black;
+  margin-bottom: 1rem;
+}
+.navbar a {
+  color: green !important;
+}
+
+/* .nav-item {
+} */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10010,10 +10025,18 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  display: flex;
+  background: black;
+}
+
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  height: 100%;
+}
+.container-fluid .container, .container-sm .container, .container-md .container, .container-lg .container, .container-xl .container {
+  font-size: 7rem;
+  color: green;
   justify-content: center;
   align-items: center;
-  background: black;
+  display: flex;
 }
 
 .form-group {
@@ -10063,6 +10086,12 @@ body {
 .form-group .error {
   color: red;
 }
+.form-group .checkbox {
+  height: 1rem;
+}
 .form-group .texto-input {
   padding-top: 2rem;
+}
+.form-group .form-group-checkbox {
+  color: green;
 }

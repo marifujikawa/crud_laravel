@@ -3,8 +3,6 @@
     .container {
         font-size: 7rem;
         color: green;
-        justify-content: center;
-        align-items: center;
     }
     .botao-login {
         background: green;
@@ -12,5 +10,8 @@
     }
     .cadastro {
         color: white;
+    }
+    .form-group-checkbox {
+        color: green;
     }
 }

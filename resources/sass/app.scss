@@ -3,7 +3,7 @@
 
 // Variables
 @import "variables";
-
+@import "./logged/navigation.scss";
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
@@ -14,10 +14,17 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: black;
+}
+.container-fluid {
+    height: 100%;
+    .container {
+        font-size: 7rem;
+        color: green;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
 }
 .form-group {
     font-size: 1rem;
@@ -66,7 +73,14 @@ body {
     .error {
         color: red;
     }
+
+    .checkbox {
+        height: 1rem;
+    }
     .texto-input {
         padding-top: 2rem;
+    }
+    .form-group-checkbox {
+        color: green;
     }
 }

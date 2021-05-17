@@ -11,13 +11,14 @@
             <div class="form-group">
 
                 @if ($errors->has('email'))
-
-                    <input class="texto-input error" type="text" name="email" id="email" placeholder="Email" value="{{ old('email') }}">
+                    <input class="texto-input error" type="text" name="email" id="email" placeholder="Email"
+                        value="{{ old('email') }}">
                     <label for="email" class="error">E-mail</label>
                     <div class="error">{{ $errors->first('email') }}</div>
 
                 @else
-                    <input class="texto-input" type="text" name="email" id="email" placeholder="Email" value="{{ old('email') }}">
+                    <input class="texto-input" type="text" name="email" id="email" placeholder="Email"
+                        value="{{ old('email') }}">
                     <label for="email">E-mail</label>
                 @endif
 
@@ -35,6 +36,11 @@
                     <label for="password">Senha</label>
 
                 @endif
+
+            </div>
+            <div class="form-group-checkbox">
+                <label>Manter-se conectado <input class="checkbox" type='checkbox' name='remember'
+                        value="{{ old('checkbox') }}"></label>
 
             </div>
             <div class="d-flex justify-content-center align-items-center">
