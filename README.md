@@ -35,6 +35,7 @@ php artisan migrate:fresh
 # - cria uma custom request 
 ```bash
 php artisan make:request NomeDaModelRequest
+-lembrar de colocar o authorize como true
 ```
 
 
