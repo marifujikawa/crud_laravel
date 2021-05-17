@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AcessoryController;
+use App\Http\Controllers\IceCreamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('product', ProductController::class);
-Route::resource('acessory', AcessoryController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('product', ProductController::class);
+    Route::resource('acessory', AcessoryController::class);
+    Route::resource('icecream', IceCreamController::class);
+});
 
-require __DIR__.'/auth.php';
+
+
+require __DIR__ . '/auth.php';

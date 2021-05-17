@@ -18,8 +18,8 @@ class CreateAcessoriesTable extends Migration
             $table->string('name')->unique();
             $table->string('description')->nullable();
             $table->integer('amount')->default(0);
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
