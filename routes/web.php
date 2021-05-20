@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AcessoryController;
 use App\Http\Controllers\ClothController;
 use App\Http\Controllers\IceCreamController;
+use App\Http\Controllers\WineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('acessory', AcessoryController::class);
     Route::resource('icecream', IceCreamController::class);
     Route::resource('cloth', ClothController::class);
+    Route::resource('wine', WineController::class);
 });
 
 
