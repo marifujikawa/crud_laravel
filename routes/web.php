@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeerController;
+use App\Http\Controllers\WineController;
+use App\Http\Controllers\ClothController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AcessoryController;
-use App\Http\Controllers\ClothController;
 use App\Http\Controllers\IceCreamController;
-use App\Http\Controllers\WineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('icecream', IceCreamController::class);
     Route::resource('cloth', ClothController::class);
     Route::resource('wine', WineController::class);
+    Route::resource('beer', BeerController::class);
 });
 
 
