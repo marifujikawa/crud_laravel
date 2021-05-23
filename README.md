@@ -75,3 +75,11 @@ php artisan route:list
 -   Read
 -   Update
 -   Delete
+
+```bash
+migrations, commands, routes, controllers, models, custom requests, validators, redirectors, views, database
+```
+
+```bash
+para criar um comando do artisan: php artisan make:commad NomeDoComando
+```
