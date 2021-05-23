@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Beer;
 use Illuminate\Http\Request;
 use App\Http\Requests\BeerRequest;
+use Session;
 
 class BeerController extends Controller
 {
@@ -15,8 +16,14 @@ class BeerController extends Controller
      */
     public function index()
     {
-        $beers=Beer::all();
-        return view('beer.index', ['beers'=>$beers]);
+        try {
+            //code...
+            $beers=Beer::all();
+            return view('beer.index', ['beers'=>$beers]);
+        } catch (\Throwable $th) {
+            Session::flash('error', $th->getMessage());
+            return view('beer.index', ['beers' => []]);
+        }
     }
 
     /**
@@ -39,6 +46,8 @@ class BeerController extends Controller
     {
         $dados = $request->all();
         Beer::create($dados);
+        Session::flash('success', "cerveja adicionada com sucesso");
+        Session::flash('error', "Falha em adicionar a cerveja");
         return redirect()->route('beer.index');
     }
 
@@ -75,8 +84,9 @@ class BeerController extends Controller
     {
         $dados = $request->all();
         $beer->update($dados);
+        Session::flash('success', "cerveja atualizada com sucesso");
+        Session::flash('error', "Falha em atualizar a cerveja");
         return redirect()->route('beer.index');
-
     }
 
     /**
@@ -88,6 +98,8 @@ class BeerController extends Controller
     public function destroy(Beer $beer)
     {
         $beer->delete();
+        Session::flash('success', "cerveja excluída com sucesso");
+        Session::flash('error', "Falha em excluir a cerveja");
         return redirect()->route('beer.index');
     }
 }

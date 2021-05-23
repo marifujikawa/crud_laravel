@@ -38,6 +38,8 @@ class AcessoryController extends Controller
     {
         $dados = $request->all();
         $id  = Acessory::create($dados);
+        Session::flash('success', "acessório adicionado com sucesso");
+        Session::flash('error', "Falha em adicionar o acessório");
         return $this->index();
     }
 
@@ -74,7 +76,8 @@ class AcessoryController extends Controller
     {
         $dados = $request->all();
         $acessory->update($dados);
-
+        Session::flash('success', "acessório atualizado com sucesso");
+        Session::flash('error', "Falha em atualizar o acessório");
         return $this->index();
     }
 

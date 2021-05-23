@@ -40,6 +40,8 @@ class ProductController extends Controller
     {
         $dados = $request->all();
         $id  = Product::create($dados);
+        Session::flash('success', "Instrumento adicionado com sucesso");
+        Session::flash('error', "Falha em adicionar o instrumento");
         return $this->index();
     }
 
@@ -76,6 +78,8 @@ class ProductController extends Controller
     {
         $dados = $request->all();
         $product->update($dados);
+        Session::flash('success', "Instrumento atualizado com sucesso");
+        Session::flash('error', "Falha em atualizar o instrumento");
 
         return $this->index();
     }

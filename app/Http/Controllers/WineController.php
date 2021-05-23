@@ -40,7 +40,8 @@ class WineController extends Controller
     {
         $dados = $request->all();
         Wine::create($dados);
-        Session::flash('success', "Vinho adicionado com sucesso");
+        Session::flash('success', "Vinho atualizado com sucesso");
+        Session::flash('error', "Falha em atualizar o vinho");
         return redirect()->route('wine.index');
     }
 
@@ -77,6 +78,8 @@ class WineController extends Controller
     {
         $dados = $request->all();
         $wine->update($dados);
+        Session::flash('success', "Vinho atualizado com sucesso");
+        Session::flash('error', "Falha em atualizar o vinho");
         return redirect()->route('wine.index');
     }
 

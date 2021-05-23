@@ -39,6 +39,8 @@ class IceCreamController extends Controller
     {
         $dados = $request->all();
         IceCream::create($dados);
+        Session::flash('success', "sorvete adicionado com sucesso");
+        Session::flash('error', "Falha em adicionar o sorvete");
         return $this->index();
     }
 
@@ -75,6 +77,8 @@ class IceCreamController extends Controller
     {
        $dados= $request->all();
        $icecream->update($dados);
+       Session::flash('success', "sorvete atualizado com sucesso");
+       Session::flash('error', "Falha em atualizar o sorvete");
        return $this->index();
     }
 

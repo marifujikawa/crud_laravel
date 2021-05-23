@@ -39,6 +39,8 @@ class ClothController extends Controller
     {
         $dados = $request->all();
         Cloth::create($dados);
+        Session::flash('success', "roupa adicionada com sucesso");
+        Session::flash('error', "Falha em adicionar a roupa");
         return $this->index();
     }
 
@@ -75,6 +77,8 @@ class ClothController extends Controller
     {
         $dados= $request->all();
         $cloth->update($dados);
+        Session::flash('success', "Roupa atualizada com sucesso");
+        Session::flash('error', "Falha em atualizar a Roupa");
         return $this->index();
     }
 
